@@ -1,0 +1,6 @@
+- Modular Python architecture
+- Threaded ICMP scanning
+- Auto Excel generation
+- PTR hostname resolution
+- CLI-first workflow
+- CI-ready & tested
