@@ -1,0 +1,841 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="IPMG is an enterprise-ready IP management and ping monitoring product for fast subnet discovery, hostname resolution, and report-ready exports.">
+      
+      
+        <meta name="author" content="Sameer Alam">
+      
+      
+        <link rel="canonical" href="https://computecentral.in/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="./assets/images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.23">
+    
+    
+      
+        <title>IPMG - IPMG — IP Management & Ping Monitoring Tool</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="./assets/stylesheets/modern/main.1e989742.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="./assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="./stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ipmg" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./." title="IPMG — IP Management &amp; Ping Monitoring Tool" class="md-header__button md-logo" aria-label="IPMG — IP Management & Ping Monitoring Tool" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IPMG — IP Management & Ping Monitoring Tool
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              IPMG
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./." class="md-tabs__link">
+        
+  
+  IPMG
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./." title="IPMG — IP Management &amp; Ping Monitoring Tool" class="md-nav__button md-logo" aria-label="IPMG — IP Management & Ping Monitoring Tool" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+
+    </a>
+    IPMG — IP Management & Ping Monitoring Tool
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IPMG
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IPMG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-teams-use-ipmg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Teams Use IPMG
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#product-highlights" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product Highlights
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-install-from-pypi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 1 — Install from PyPI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-install-with-uv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 2 — Install with uv
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-3-development-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 3 — Development install
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-4-install-with-curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 4 — Install with curl
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Commands
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sample Output
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input Formats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macos-gui-beta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS GUI Beta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        License
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="ipmg">IPMG</h1>
+<section class="ipmg-hero">
+  <div class="ipmg-hero__copy">
+    <div class="ipmg-brand">
+      <span class="ipmg-brand__icon">📡</span>
+      <span>IPMG Network Scanner</span>
+    </div>
+    <p class="ipmg-kicker">Enterprise IP management and ping monitoring</p>
+    <h1>Find live hosts, resolve networks, and export clean reports in minutes.</h1>
+    <p class="ipmg-lede">
+      IPMG is a modern Python CLI for network administrators, cybersecurity teams,
+      DevOps engineers, and SREs who need fast, repeatable visibility across IP
+      ranges, spreadsheets, CIDR blocks, and local subnets.
+    </p>
+    <div class="ipmg-actions">
+      <a class="ipmg-button ipmg-button--primary" href="#installation">Install IPMG</a>
+      <a class="ipmg-button ipmg-button--ghost" href="https://github.com/sameeralam3127/ipmg">View on GitHub</a>
+    </div>
+  </div>
+  <div class="ipmg-terminal" aria-label="IPMG terminal preview">
+    <div class="ipmg-terminal__bar">
+      <span></span><span></span><span></span>
+      <strong>ipmg scan</strong>
+    </div>
+    <pre><code>$ ipmg --discover --resolve --formats csv xlsx
+Discovering local subnet... 192.168.1.0/24
+Scanning 254 hosts with parallel workers
+
+Status        Count
+Active        132
+Inactive      12
+Unreachable   4
+Timeout       2
+
+Active Rate: 88.00%
+Scan Duration: 6.24s</code></pre>
+  </div>
+</section>
+
+<div class="admonition warning">
+<p class="admonition-title">Authorized networks only</p>
+<p>Do not use IPMG on networks without explicit authorization. Always obtain written approval from your organization's Cybersecurity or Network Security team before scanning.</p>
+</div>
+<nav class="ipmg-page-toc" aria-label="Page contents">
+  <strong>On this page</strong>
+  <a href="#why-teams-use-ipmg">Why Teams Use IPMG</a>
+  <a href="#product-highlights">Product Highlights</a>
+  <a href="#installation">Installation</a>
+  <a href="#common-commands">Common Commands</a>
+  <a href="#sample-output">Sample Output</a>
+  <a href="#input-formats">Input Formats</a>
+  <a href="#output-format">Output Format</a>
+  <a href="#troubleshooting">Troubleshooting</a>
+  <a href="#macos-gui-beta">macOS GUI Beta</a>
+</nav>
+
+<h2 id="why-teams-use-ipmg">Why Teams Use IPMG</h2>
+<div class="ipmg-grid">
+  <article>
+    <strong>Fast subnet discovery</strong>
+    <p>Automatically detect and scan local network ranges, or pass a single IP, text file, CSV, Excel file, or CIDR block.</p>
+  </article>
+  <article>
+    <strong>Parallel monitoring</strong>
+    <p>Thread-pool pinging keeps large scans moving while recording failures as structured results instead of stopping the run.</p>
+  </article>
+  <article>
+    <strong>Report-ready exports</strong>
+    <p>Generate XLSX, CSV, and JSON outputs with batch timestamps, duration, latency, hostname, and status metadata.</p>
+  </article>
+  <article>
+    <strong>Built for automation</strong>
+    <p>Use scheduled recurrent scans, CLI flags, and CI-friendly project structure for repeatable network checks.</p>
+  </article>
+</div>
+
+<div class="admonition tip">
+<p class="admonition-title">Best fit</p>
+<p>IPMG is ideal for network admins, systems engineers, cybersecurity teams, DevOps teams, and SREs who need clear status reporting without building a custom scanner.</p>
+</div>
+<h2 id="product-highlights">Product Highlights</h2>
+<ul>
+<li>Subnet auto-discovery</li>
+<li>Parallel pinging with thread pools</li>
+<li>Hostname resolution through PTR lookups</li>
+<li>Multi-format reporting in XLSX, CSV, and JSON</li>
+<li>Flexible target input from <code>.xlsx</code>, <code>.csv</code>, <code>.txt</code>, <code>.list</code>, literal IPs, and CIDR blocks</li>
+<li>Scheduled recurrent scans with <code>--interval</code></li>
+<li>Auto-generated sample input files</li>
+<li>Colorized CLI output with rich console panels, progress bars, and status summaries</li>
+<li>Batch-level scan timestamps and duration tracking</li>
+<li>Modular, testable Python package architecture</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<h3 id="option-1-install-from-pypi">Option 1 — Install from PyPI</h3>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>ipmg
+ipmg<span class="w"> </span>--help
+</code></pre></div>
+<h3 id="option-2-install-with-uv">Option 2 — Install with uv</h3>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>tool<span class="w"> </span>install<span class="w"> </span>git+https://github.com/sameeralam3127/ipmg.git
+ipmg<span class="w"> </span>--help
+</code></pre></div>
+<h3 id="option-3-development-install">Option 3 — Development install</h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/sameeralam3127/ipmg.git
+<span class="nb">cd</span><span class="w"> </span>ipmg
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+ipmg<span class="w"> </span>--help
+</code></pre></div>
+<h3 id="option-4-install-with-curl">Option 4 — Install with curl</h3>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sSL<span class="w"> </span>https://raw.githubusercontent.com/sameeralam3127/ipmg/main/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+ipmg<span class="w"> </span>--help
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Installer behavior</p>
+<p>The installer checks for <code>uv</code>, installs it when needed, and installs IPMG globally through <code>uv</code>.</p>
+</div>
+<h2 id="common-commands">Common Commands</h2>
+<table>
+<thead>
+<tr>
+<th>Use Case</th>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basic scan</td>
+<td><code>ipmg</code></td>
+<td>Runs with default config and creates a sample input file if missing.</td>
+</tr>
+<tr>
+<td>Excel scan</td>
+<td><code>ipmg --input network_devices.xlsx</code></td>
+<td>Scans IPs from an Excel file with an <code>IP Address</code> column.</td>
+</tr>
+<tr>
+<td>CSV scan</td>
+<td><code>ipmg --input network_devices.csv</code></td>
+<td>Scans IPs from a CSV file with an <code>IP Address</code> column.</td>
+</tr>
+<tr>
+<td>Text scan</td>
+<td><code>ipmg --input targets.txt</code></td>
+<td>Scans one target per line. Blank lines and comments are ignored.</td>
+</tr>
+<tr>
+<td>Single host</td>
+<td><code>ipmg --input 8.8.8.8</code></td>
+<td>Scans a literal IP address.</td>
+</tr>
+<tr>
+<td>CIDR range</td>
+<td><code>ipmg --input 192.168.1.0/24</code></td>
+<td>Expands the CIDR block into host IPs and scans them.</td>
+</tr>
+<tr>
+<td>LAN discovery</td>
+<td><code>ipmg --discover</code></td>
+<td>Automatically detects and scans devices in the local subnet.</td>
+</tr>
+<tr>
+<td>CSV + XLSX export</td>
+<td><code>ipmg --formats csv xlsx</code></td>
+<td>Exports scan results in CSV and Excel formats.</td>
+</tr>
+<tr>
+<td>Hostname lookup</td>
+<td><code>ipmg --resolve</code></td>
+<td>Performs reverse DNS lookups for hostnames.</td>
+</tr>
+<tr>
+<td>Scheduled scan</td>
+<td><code>ipmg --interval 10</code></td>
+<td>Repeats the scan every 10 minutes.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sample-output">Sample Output</h2>
+<div class="highlight"><pre><span></span><code>IPMG Summary
+
+Status        Count
+Active        132
+Inactive      12
+Unreachable   4
+Timeout       2
+
+Batch Timestamp: 2026-04-09 11:42:13
+Total Hosts: 150
+Active Rate: 88.00%
+Completion Rate: 90.67%
+Scan Duration: 6.24s
+</code></pre></div>
+<h2 id="input-formats">Input Formats</h2>
+<p>IPMG accepts targets from Excel files, CSV files, plain text files, literal IPs, and CIDR blocks.</p>
+<p>For Excel and CSV inputs, include an <code>IP Address</code> column:</p>
+<table>
+<thead>
+<tr>
+<th>IP Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>192.168.1.1</td>
+</tr>
+<tr>
+<td>10.0.0.1</td>
+</tr>
+<tr>
+<td>10.0.1.0/30</td>
+</tr>
+</tbody>
+</table>
+<p>Text files can contain one target per line:</p>
+<div class="highlight"><pre><span></span><code># Production DNS
+8.8.8.8
+1.1.1.1
+192.168.1.0/30
+</code></pre></div>
+<h2 id="output-format">Output Format</h2>
+<p>Each exported row includes batch-level metadata so a single scan can be grouped reliably in downstream tools.</p>
+<table>
+<thead>
+<tr>
+<th>IP Address</th>
+<th>Status</th>
+<th>Latency</th>
+<th>Hostname</th>
+<th>Batch Timestamp</th>
+<th>Scan Duration (s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8.8.8.8</td>
+<td>Active</td>
+<td>12.5</td>
+<td>dns.google</td>
+<td>2026-04-09 11:42:13</td>
+<td>6.24</td>
+</tr>
+</tbody>
+</table>
+<p>Possible status values include <code>Active</code>, <code>Inactive</code>, <code>Timeout</code>, <code>Unreachable</code>, <code>Invalid IP</code>, and <code>Error</code>.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<div class="admonition failure">
+<p class="admonition-title">Command not found: ipmg</p>
+<p>Install IPMG with <code>pip install ipmg</code>, or use <code>pip install -e .</code> inside a cloned development checkout.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Permission denied output folder</p>
+<p>Run IPMG inside a writable directory, choose a writable output path, or use elevated permissions only when your organization allows it.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Hostname unresolvable</p>
+<p>The target may not have a DNS PTR record. The scan can still complete without hostname data.</p>
+</div>
+<div class="admonition bug">
+<p class="admonition-title">One host crashes the scan</p>
+<p>IPMG records unexpected per-host failures as <code>Error</code> and continues scanning the remaining targets.</p>
+</div>
+<h2 id="macos-gui-beta">macOS GUI Beta</h2>
+<p>A native macOS interface for IPMG is under active development.</p>
+<p><a href="https://github.com/sameeralam3127/IP_Management/releases/tag/macOS">Download the PingMonitorApp beta</a></p>
+<h2 id="license">License</h2>
+<p>MIT License. Free for commercial and personal use.</p>
+<p>Made with Python and uv.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026
+
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":".","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.tabs","navigation.top","navigation.tracking","search.highlight","toc.integrate"],"search":"./assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="./assets/javascripts/bundle.5fcf0de6.min.js"></script>
+      
+    
+  </body>
+</html>

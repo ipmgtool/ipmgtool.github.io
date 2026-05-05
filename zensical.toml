@@ -1,55 +1,27 @@
-# ============================================================================
-# IPMG Documentation — Zensical Configuration
-# ============================================================================
-
 [project]
-
-site_name = "IPMG"
-site_description = "IP Management & Ping Monitoring Tool — fast, modular network scanning for DevOps, SREs, and Security teams."
+site_name = "IPMG — IP Management & Ping Monitoring Tool"
+site_description = "IPMG is an enterprise-ready IP management and ping monitoring product for fast subnet discovery, hostname resolution, and report-ready exports."
 site_author = "Sameer Alam"
-site_url = "https://sameeralam3127.github.io/ipmg/"
+site_url = "https://computecentral.in/"
+nav = []
 
 copyright = """
-Copyright &copy; 2025 Sameer Alam.
-Released under the MIT License.
+Copyright © 2026
 """
 
-nav = [
-  { title = "Overview", page = "index.md" },
+extra_css = ["stylesheets/extra.css"]
 
-  { title = "Getting Started", children = [
-      { title = "Installation", page = "install.md" },
-      { title = "Quick Start", page = "usage.md" }
-    ]
-  },
-
-  { title = "Core Concepts", children = [
-      { title = "Features", page = "features.md" },
-      { title = "Security & Ethics", page = "security.md" }
-    ]
-  },
-
-  { title = "Project", children = [
-      { title = "Roadmap", page = "roadmap.md" },
-      { title = "Changelog", page = "changelog.md" }
-    ]
-  }
-]
-
-
-# ----------------------------------------------------------------------------
-# Theme Configuration
-# ----------------------------------------------------------------------------
 [project.theme]
-
-variant = "default"
 language = "en"
+favicon = "assets/images/favicon.svg"
+logo = ""
 
 features = [
   "announce.dismiss",
+  "content.code.annotate",
   "content.code.copy",
   "content.code.select",
-  "content.code.annotate",
+  "content.footnote.tooltips",
   "content.tabs.link",
   "content.tooltips",
   "navigation.footer",
@@ -57,50 +29,26 @@ features = [
   "navigation.instant",
   "navigation.instant.prefetch",
   "navigation.path",
-  "navigation.sections",
+  "navigation.tabs",
   "navigation.top",
   "navigation.tracking",
   "search.highlight",
+  "toc.integrate",
 ]
 
-# ----------------------------------------------------------------------------
-# Color Palette (Modern + Accessible)
-# ----------------------------------------------------------------------------
 [[project.theme.palette]]
 scheme = "default"
-primary = "blue"
-accent = "indigo"
 toggle.icon = "lucide/sun"
 toggle.name = "Switch to dark mode"
 
 [[project.theme.palette]]
 scheme = "slate"
-primary = "blue"
-accent = "indigo"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to light mode"
 
-# ----------------------------------------------------------------------------
-# Fonts (Readable & Developer-Friendly)
-# ----------------------------------------------------------------------------
-[project.theme.font]
-text = "Inter"
-code = "JetBrains Mono"
-
-# ----------------------------------------------------------------------------
-# Icons & Branding
-# ----------------------------------------------------------------------------
 [project.theme.icon]
-logo = "lucide/network"
-repo = "lucide/github"
+logo = "lucide/smile"
 
-# ----------------------------------------------------------------------------
-# Social / External Links
-# ----------------------------------------------------------------------------
-[[project.extra.social]]
-icon = "fontawesome/brands/github"
-link = "https://github.com/sameeralam3127/ipmg"
-
-[[project.extra.social]]
-icon = "fontawesome/brands/python"
-link = "https://pypi.org/project/ipmg/"
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.superfences]
