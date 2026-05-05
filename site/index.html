@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A new project generated from the default template project.">
+        <meta name="description" content="IPMG is an enterprise-ready IP management and ping monitoring product for fast subnet discovery, hostname resolution, and report-ready exports.">
       
       
         <meta name="author" content="Sameer Alam">
@@ -20,7 +20,7 @@
         
       
       
-      <link rel="icon" href="./.">
+      <link rel="icon" href="./assets/images/favicon.svg">
       <meta name="generator" content="zensical-0.0.23">
     
     
@@ -306,10 +306,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#security-disclaimer" class="md-nav__link">
+  <a href="#why-teams-use-ipmg" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚠️ Security Disclaimer
+        Why Teams Use IPMG
       
     </span>
   </a>
@@ -317,10 +317,148 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
+  <a href="#product-highlights" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Features
+        Product Highlights
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-install-from-pypi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 1 — Install from PyPI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-install-with-uv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 2 — Install with uv
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-3-development-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 3 — Development install
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-4-install-with-curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 4 — Install with curl
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Commands
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sample Output
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input Formats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macos-gui-beta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS GUI Beta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        License
       
     </span>
   </a>
@@ -359,82 +497,122 @@
                   
 
 <h1 id="ipmg">IPMG</h1>
-<hr />
-<p><strong>IPMG (IP Management Tool)</strong> is a modern, modular, enterprise-ready network scanner and monitoring utility.
-It replaces the legacy <code>ip_pinger.py</code> script with a <strong>clean package architecture</strong>, CLI tooling, and automated workflows.</p>
-<p>Designed for:</p>
+<section class="ipmg-hero">
+  <div class="ipmg-hero__copy">
+    <div class="ipmg-brand">
+      <span class="ipmg-brand__icon">📡</span>
+      <span>IPMG Network Scanner</span>
+    </div>
+    <p class="ipmg-kicker">Enterprise IP management and ping monitoring</p>
+    <h1>Find live hosts, resolve networks, and export clean reports in minutes.</h1>
+    <p class="ipmg-lede">
+      IPMG is a modern Python CLI for network administrators, cybersecurity teams,
+      DevOps engineers, and SREs who need fast, repeatable visibility across IP
+      ranges, spreadsheets, CIDR blocks, and local subnets.
+    </p>
+    <div class="ipmg-actions">
+      <a class="ipmg-button ipmg-button--primary" href="#installation">Install IPMG</a>
+      <a class="ipmg-button ipmg-button--ghost" href="https://github.com/sameeralam3127/ipmg">View on GitHub</a>
+    </div>
+  </div>
+  <div class="ipmg-terminal" aria-label="IPMG terminal preview">
+    <div class="ipmg-terminal__bar">
+      <span></span><span></span><span></span>
+      <strong>ipmg scan</strong>
+    </div>
+    <pre><code>$ ipmg --discover --resolve --formats csv xlsx
+Discovering local subnet... 192.168.1.0/24
+Scanning 254 hosts with parallel workers
+
+Status        Count
+Active        132
+Inactive      12
+Unreachable   4
+Timeout       2
+
+Active Rate: 88.00%
+Scan Duration: 6.24s</code></pre>
+  </div>
+</section>
+
+<div class="admonition warning">
+<p class="admonition-title">Authorized networks only</p>
+<p>Do not use IPMG on networks without explicit authorization. Always obtain written approval from your organization's Cybersecurity or Network Security team before scanning.</p>
+</div>
+<nav class="ipmg-page-toc" aria-label="Page contents">
+  <strong>On this page</strong>
+  <a href="#why-teams-use-ipmg">Why Teams Use IPMG</a>
+  <a href="#product-highlights">Product Highlights</a>
+  <a href="#installation">Installation</a>
+  <a href="#common-commands">Common Commands</a>
+  <a href="#sample-output">Sample Output</a>
+  <a href="#input-formats">Input Formats</a>
+  <a href="#output-format">Output Format</a>
+  <a href="#troubleshooting">Troubleshooting</a>
+  <a href="#macos-gui-beta">macOS GUI Beta</a>
+</nav>
+
+<h2 id="why-teams-use-ipmg">Why Teams Use IPMG</h2>
+<div class="ipmg-grid">
+  <article>
+    <strong>Fast subnet discovery</strong>
+    <p>Automatically detect and scan local network ranges, or pass a single IP, text file, CSV, Excel file, or CIDR block.</p>
+  </article>
+  <article>
+    <strong>Parallel monitoring</strong>
+    <p>Thread-pool pinging keeps large scans moving while recording failures as structured results instead of stopping the run.</p>
+  </article>
+  <article>
+    <strong>Report-ready exports</strong>
+    <p>Generate XLSX, CSV, and JSON outputs with batch timestamps, duration, latency, hostname, and status metadata.</p>
+  </article>
+  <article>
+    <strong>Built for automation</strong>
+    <p>Use scheduled recurrent scans, CLI flags, and CI-friendly project structure for repeatable network checks.</p>
+  </article>
+</div>
+
+<div class="admonition tip">
+<p class="admonition-title">Best fit</p>
+<p>IPMG is ideal for network admins, systems engineers, cybersecurity teams, DevOps teams, and SREs who need clear status reporting without building a custom scanner.</p>
+</div>
+<h2 id="product-highlights">Product Highlights</h2>
 <ul>
-<li>Network administrators</li>
-<li>Systems engineers</li>
-<li>Cybersecurity teams</li>
-<li>DevOps and SREs</li>
+<li>Subnet auto-discovery</li>
+<li>Parallel pinging with thread pools</li>
+<li>Hostname resolution through PTR lookups</li>
+<li>Multi-format reporting in XLSX, CSV, and JSON</li>
+<li>Flexible target input from <code>.xlsx</code>, <code>.csv</code>, <code>.txt</code>, <code>.list</code>, literal IPs, and CIDR blocks</li>
+<li>Scheduled recurrent scans with <code>--interval</code></li>
+<li>Auto-generated sample input files</li>
+<li>Colorized CLI output with rich console panels, progress bars, and status summaries</li>
+<li>Batch-level scan timestamps and duration tracking</li>
+<li>Modular, testable Python package architecture</li>
 </ul>
-<p>IPMG supports:</p>
-<ul>
-<li><strong>Subnet auto-discovery</strong></li>
-<li><strong>Parallel pinging with thread pools</strong></li>
-<li><strong>Hostname resolution</strong></li>
-<li><strong>Multi-format reporting (XLSX/CSV/JSON)</strong></li>
-<li><strong>Scheduled recurrent scans</strong></li>
-<li><strong>Auto-generated sample Excel input</strong></li>
-<li><strong>Colorized CLI output</strong></li>
-<li><strong>Modular testable architecture</strong></li>
-</ul>
-<hr />
-<h2 id="security-disclaimer">⚠️ Security Disclaimer</h2>
-<blockquote>
-<p><strong>Do NOT use this tool on networks without explicit authorization.</strong>
-Always obtain written approval from your organization's <strong>Cybersecurity / Network Security team</strong>.
-Unauthorized scanning may violate internal policies or law.</p>
-</blockquote>
-<p>IPMG includes a built-in disclaimer shown at runtime (<code>security.py</code>).</p>
-<hr />
-<h2 id="features">Features</h2>
-<ul>
-<li>Fully modular Python package (<code>src/ipmg</code>)</li>
-<li>System-wide CLI command: <code>ipmg</code></li>
-<li>Test coverage via <code>pytest</code></li>
-<li>Formatting and linting via <code>ruff</code> and <code>black</code></li>
-<li>CI-friendly project structure</li>
-</ul>
-<hr />
-<h1 id="installation">Installation</h1>
-<h2 id="option-1-install-from-pypi-recommended-for-most-users">Option 1 — Install from PyPI (recommended for most users)</h2>
-<p>Install the latest stable release (<strong>ipmg 1.0.2</strong>) from PyPI:</p>
+<h2 id="installation">Installation</h2>
+<h3 id="option-1-install-from-pypi">Option 1 — Install from PyPI</h3>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>ipmg
+ipmg<span class="w"> </span>--help
 </code></pre></div>
-<p>Verify installation:</p>
-<div class="highlight"><pre><span></span><code>ipmg<span class="w"> </span>--help
-</code></pre></div>
-<hr />
-<h2 id="option-2-install-via-uv-recommended-for-isolated-global-install">Option 2 — Install via uv (recommended for isolated global install)</h2>
+<h3 id="option-2-install-with-uv">Option 2 — Install with uv</h3>
 <div class="highlight"><pre><span></span><code>uv<span class="w"> </span>tool<span class="w"> </span>install<span class="w"> </span>git+https://github.com/sameeralam3127/ipmg.git
+ipmg<span class="w"> </span>--help
 </code></pre></div>
-<p>Test:</p>
-<div class="highlight"><pre><span></span><code>ipmg<span class="w"> </span>--help
-</code></pre></div>
-<hr />
-<h2 id="option-3-install-via-pip-editable-development-mode">Option 3 — Install via pip (editable, development mode)</h2>
+<h3 id="option-3-development-install">Option 3 — Development install</h3>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/sameeralam3127/ipmg.git
-<span class="nb">cd</span><span class="w"> </span>IP_Management
+<span class="nb">cd</span><span class="w"> </span>ipmg
 pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+ipmg<span class="w"> </span>--help
 </code></pre></div>
-<p>Verify:</p>
-<div class="highlight"><pre><span></span><code>ipmg<span class="w"> </span>--help
-</code></pre></div>
-<hr />
-<h2 id="option-4-install-using-curl-installer">Option 4 — Install using curl installer</h2>
+<h3 id="option-4-install-with-curl">Option 4 — Install with curl</h3>
 <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sSL<span class="w"> </span>https://raw.githubusercontent.com/sameeralam3127/ipmg/main/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+ipmg<span class="w"> </span>--help
 </code></pre></div>
-<p>This script:</p>
-<ul>
-<li>Installs <strong>uv</strong> if missing</li>
-<li>Installs <strong>ipmg</strong> globally using uv</li>
-</ul>
-<p>Verify:</p>
-<div class="highlight"><pre><span></span><code>ipmg<span class="w"> </span>--help
-</code></pre></div>
-<hr />
+<div class="admonition note">
+<p class="admonition-title">Installer behavior</p>
+<p>The installer checks for <code>uv</code>, installs it when needed, and installs IPMG globally through <code>uv</code>.</p>
+</div>
+<h2 id="common-commands">Common Commands</h2>
 <table>
 <thead>
 <tr>
@@ -445,51 +623,75 @@ pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </s
 </thead>
 <tbody>
 <tr>
-<td>Basic Example (Default Input)</td>
+<td>Basic scan</td>
 <td><code>ipmg</code></td>
-<td>Runs with default config. Creates <code>ip_list.xlsx</code> with sample IPs if missing.</td>
+<td>Runs with default config and creates a sample input file if missing.</td>
 </tr>
 <tr>
-<td>Scan a Custom Input File</td>
+<td>Excel scan</td>
 <td><code>ipmg --input network_devices.xlsx</code></td>
-<td>Scans IPs from the specified Excel file.</td>
+<td>Scans IPs from an Excel file with an <code>IP Address</code> column.</td>
 </tr>
 <tr>
-<td>Auto-discover LAN Subnet</td>
+<td>CSV scan</td>
+<td><code>ipmg --input network_devices.csv</code></td>
+<td>Scans IPs from a CSV file with an <code>IP Address</code> column.</td>
+</tr>
+<tr>
+<td>Text scan</td>
+<td><code>ipmg --input targets.txt</code></td>
+<td>Scans one target per line. Blank lines and comments are ignored.</td>
+</tr>
+<tr>
+<td>Single host</td>
+<td><code>ipmg --input 8.8.8.8</code></td>
+<td>Scans a literal IP address.</td>
+</tr>
+<tr>
+<td>CIDR range</td>
+<td><code>ipmg --input 192.168.1.0/24</code></td>
+<td>Expands the CIDR block into host IPs and scans them.</td>
+</tr>
+<tr>
+<td>LAN discovery</td>
 <td><code>ipmg --discover</code></td>
 <td>Automatically detects and scans devices in the local subnet.</td>
 </tr>
 <tr>
-<td>Export Results to CSV + XLSX</td>
+<td>CSV + XLSX export</td>
 <td><code>ipmg --formats csv xlsx</code></td>
 <td>Exports scan results in CSV and Excel formats.</td>
 </tr>
 <tr>
-<td>Resolve Hostnames (PTR Records)</td>
+<td>Hostname lookup</td>
 <td><code>ipmg --resolve</code></td>
-<td>Performs reverse DNS (PTR) lookups for hostnames.</td>
+<td>Performs reverse DNS lookups for hostnames.</td>
 </tr>
 <tr>
-<td>Run Every 10 Minutes</td>
+<td>Scheduled scan</td>
 <td><code>ipmg --interval 10</code></td>
 <td>Repeats the scan every 10 minutes.</td>
 </tr>
 </tbody>
 </table>
-<p>If <code>ip_list.xlsx</code> does not exist → it will be created with sample IPs.</p>
-<hr />
-<h1 id="sample-output-summary">Sample Output Summary</h1>
-<div class="highlight"><pre><span></span><code>=== IPMG Summary ===
-Active: 132
-Inactive: 12
-Unreachable: 4
-Timeout: 2
+<h2 id="sample-output">Sample Output</h2>
+<div class="highlight"><pre><span></span><code>IPMG Summary
 
-Success Rate: 88.00%
+Status        Count
+Active        132
+Inactive      12
+Unreachable   4
+Timeout       2
+
+Batch Timestamp: 2026-04-09 11:42:13
+Total Hosts: 150
+Active Rate: 88.00%
+Completion Rate: 90.67%
+Scan Duration: 6.24s
 </code></pre></div>
-<hr />
-<h1 id="input-file-format-excel-or-csv">Input File Format (Excel or CSV)</h1>
-<p>Example:</p>
+<h2 id="input-formats">Input Formats</h2>
+<p>IPMG accepts targets from Excel files, CSV files, plain text files, literal IPs, and CIDR blocks.</p>
+<p>For Excel and CSV inputs, include an <code>IP Address</code> column:</p>
 <table>
 <thead>
 <tr>
@@ -504,12 +706,18 @@ Success Rate: 88.00%
 <td>10.0.0.1</td>
 </tr>
 <tr>
-<td>8.8.8.8</td>
+<td>10.0.1.0/30</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h1 id="output-file-format">Output File Format</h1>
+<p>Text files can contain one target per line:</p>
+<div class="highlight"><pre><span></span><code># Production DNS
+8.8.8.8
+1.1.1.1
+192.168.1.0/30
+</code></pre></div>
+<h2 id="output-format">Output Format</h2>
+<p>Each exported row includes batch-level metadata so a single scan can be grouped reliably in downstream tools.</p>
 <table>
 <thead>
 <tr>
@@ -517,41 +725,45 @@ Success Rate: 88.00%
 <th>Status</th>
 <th>Latency</th>
 <th>Hostname</th>
-<th>Timestamp</th>
+<th>Batch Timestamp</th>
+<th>Scan Duration (s)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>8.8.8.8</td>
 <td>Active</td>
-<td>12.5 ms</td>
+<td>12.5</td>
 <td>dns.google</td>
-<td>2025-10-12 18:40:15</td>
+<td>2026-04-09 11:42:13</td>
+<td>6.24</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h1 id="troubleshooting">Troubleshooting</h1>
-<h3 id="command-not-found-ipmg"><strong>Command not found: ipmg</strong></h3>
-<p>Solution:</p>
-<div class="highlight"><pre><span></span><code>pip install -e .
-</code></pre></div>
-<h3 id="permission-denied-output-folder"><strong>Permission denied output folder</strong></h3>
-<p>Run inside a writeable directory or use:</p>
-<div class="highlight"><pre><span></span><code>sudo ipmg ...
-</code></pre></div>
-<h3 id="hostname-unresolvable"><strong>Hostname Unresolvable</strong></h3>
-<p>Likely missing DNS PTR records.</p>
-<hr />
-<h1 id="macos-gui-pingmonitorapp-beta">macOS GUI (PingMonitorApp – Beta)</h1>
+<p>Possible status values include <code>Active</code>, <code>Inactive</code>, <code>Timeout</code>, <code>Unreachable</code>, <code>Invalid IP</code>, and <code>Error</code>.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<div class="admonition failure">
+<p class="admonition-title">Command not found: ipmg</p>
+<p>Install IPMG with <code>pip install ipmg</code>, or use <code>pip install -e .</code> inside a cloned development checkout.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Permission denied output folder</p>
+<p>Run IPMG inside a writable directory, choose a writable output path, or use elevated permissions only when your organization allows it.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Hostname unresolvable</p>
+<p>The target may not have a DNS PTR record. The scan can still complete without hostname data.</p>
+</div>
+<div class="admonition bug">
+<p class="admonition-title">One host crashes the scan</p>
+<p>IPMG records unexpected per-host failures as <code>Error</code> and continues scanning the remaining targets.</p>
+</div>
+<h2 id="macos-gui-beta">macOS GUI Beta</h2>
 <p>A native macOS interface for IPMG is under active development.</p>
-<p>Download Beta:</p>
-<p>👉 <a href="https://github.com/sameeralam3127/IP_Management/releases/tag/macOS">https://github.com/sameeralam3127/IP_Management/releases/tag/macOS</a></p>
-<hr />
-<h1 id="license">License</h1>
-<p>MIT License — free for commercial and personal use.</p>
-<hr />
-<p>Made with ❤️ using Python &amp; uv.</p>
+<p><a href="https://github.com/sameeralam3127/IP_Management/releases/tag/macOS">Download the PingMonitorApp beta</a></p>
+<h2 id="license">License</h2>
+<p>MIT License. Free for commercial and personal use.</p>
+<p>Made with Python and uv.</p>
 
 
 

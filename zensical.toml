@@ -1,6 +1,6 @@
 [project]
 site_name = "IPMG — IP Management & Ping Monitoring Tool"
-site_description = "A new project generated from the default template project."
+site_description = "IPMG is an enterprise-ready IP management and ping monitoring product for fast subnet discovery, hostname resolution, and report-ready exports."
 site_author = "Sameer Alam"
 site_url = "https://computecentral.in/"
 nav = []
@@ -13,7 +13,7 @@ extra_css = ["stylesheets/extra.css"]
 
 [project.theme]
 language = "en"
-favicon = ""
+favicon = "assets/images/favicon.svg"
 logo = ""
 
 features = [
